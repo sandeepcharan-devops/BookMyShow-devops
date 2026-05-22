@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: bms-container
-        image: vipparlasandeepcharan/bms:v1
+        image: vipparlasandeepcharan/bms:v2
 
         ports:
         - containerPort: 3000
