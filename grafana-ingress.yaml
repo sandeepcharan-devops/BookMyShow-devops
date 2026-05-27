@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: bms-ingress
+  name: grafana-ingress
 
 spec:
   ingressClassName: traefik
@@ -10,21 +10,12 @@ spec:
   rules:
   - http:
       paths:
-
       - path: /grafana
         pathType: Prefix
 
         backend:
           service:
             name: monitoring-grafana
-            port:
-              number: 80
 
-      - path: /
-        pathType: Prefix
-
-        backend:
-          service:
-            name: bms-service
             port:
               number: 80
